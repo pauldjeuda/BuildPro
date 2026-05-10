@@ -3,3 +3,7 @@ export { StatusBadge } from './status-badge';
 export { ProgressBar } from './progress-bar';
 export { EmptyState } from './empty-state';
 export { DataTable } from './data-table';
+export { PageHeader } from './page-header';
+export { StatsGrid } from './stats-grid';
+export { WorkflowCard } from './workflow-card';
+export { FilterBar } from './filter-bar';
