@@ -26,7 +26,14 @@ type StatusType =
   | 'facturee'
   | 'payee'
   | 'ouverte'
-  | 'fermee';
+  | 'fermee'
+  | 'operational'
+  | 'maintenance'
+  | 'ok'
+  | 'alert'
+  | 'critical'
+  | 'open'
+  | 'resolved';
 
 interface StatusBadgeProps {
   status: StatusType;
@@ -63,8 +70,16 @@ const statusConfig: Record<
   livree: { variant: 'success', label: 'Livrée' },
   facturee: { variant: 'secondary', label: 'Facturée' },
   payee: { variant: 'success', label: 'Payée' },
-  ouverte: { variant: 'destructive', label: 'Ouverte' },
-  fermee: { variant: 'success', label: 'Fermée' },
+  ouverte: { variant: 'default', label: 'Ouverte' },
+  fermee: { variant: 'secondary', label: 'Fermée' },
+  operational: { variant: 'success', label: 'Opérationnel' },
+  maintenance: { variant: 'warning', label: 'Maintenance' },
+  ok: { variant: 'success', label: 'OK' },
+  alert: { variant: 'warning', label: 'Alerte' },
+  critical: { variant: 'destructive', label: 'Critique' },
+  open: { variant: 'destructive', label: 'Ouvert' },
+  resolved: { variant: 'success', label: 'Résolu' },
+  en_cours: { variant: 'default', label: 'En cours' },
 };
 
 export function StatusBadge({ status, label }: StatusBadgeProps) {
