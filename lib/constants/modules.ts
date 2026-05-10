@@ -68,6 +68,14 @@ export const MODULES = {
     description: 'Maintenance et gestion des équipements',
     level: 2,
   },
+  POINTAGE: {
+    id: 'pointage',
+    name: 'Pointage',
+    path: '/pointage',
+    icon: 'Clock',
+    description: 'Suivi des présences et heures',
+    level: 1,
+  },
 } as const;
 
 export type ModuleId = keyof typeof MODULES;
@@ -75,7 +83,7 @@ export type ModuleId = keyof typeof MODULES;
 export const PRIMARY_MODULES = Object.values(MODULES)
   .filter(m => m.level === 1)
   .sort((a, b) => {
-    const order = ['DASHBOARD', 'CHANTIERS', 'RAPPORTS', 'FINANCE'];
+    const order = ['DASHBOARD', 'CHANTIERS', 'POINTAGE', 'RAPPORTS', 'FINANCE'];
     return order.indexOf(a.id.toUpperCase()) - order.indexOf(b.id.toUpperCase());
   });
 

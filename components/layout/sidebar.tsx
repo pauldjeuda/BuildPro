@@ -14,20 +14,22 @@ import {
   ShoppingCart,
   AlertCircle,
   Truck,
+  Clock,
   Menu,
   X,
 } from 'lucide-react';
 
-const iconMap: Record<string, React.ReactNode> = {
-  LayoutDashboard: <LayoutDashboard className="h-5 w-5" />,
-  Building2: <Building2 className="h-5 w-5" />,
-  FileText: <FileText className="h-5 w-5" />,
-  DollarSign: <DollarSign className="h-5 w-5" />,
-  Package: <Package className="h-5 w-5" />,
-  ShoppingCart: <ShoppingCart className="h-5 w-5" />,
-  AlertCircle: <AlertCircle className="h-5 w-5" />,
-  Truck: <Truck className="h-5 w-5" />,
-};
+  const iconMap: Record<string, React.ReactNode> = {
+    LayoutDashboard: <LayoutDashboard className="h-5 w-5" />,
+    Building2: <Building2 className="h-5 w-5" />,
+    FileText: <FileText className="h-5 w-5" />,
+    DollarSign: <DollarSign className="h-5 w-5" />,
+    Package: <Package className="h-5 w-5" />,
+    ShoppingCart: <ShoppingCart className="h-5 w-5" />,
+    AlertCircle: <AlertCircle className="h-5 w-5" />,
+    Truck: <Truck className="h-5 w-5" />,
+    Clock: <Clock className="h-5 w-5" />,
+  };
 
 export function Sidebar() {
   const pathname = usePathname();
